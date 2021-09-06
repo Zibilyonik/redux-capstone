@@ -15,6 +15,7 @@ const getMonsters = async (...challengeRating) => {
           size: item.size,
           type: item.type,
           alignment: item.alignment,
+          challenge: item.challenge_rating,
         };
         monsters.push(monster);
       });
