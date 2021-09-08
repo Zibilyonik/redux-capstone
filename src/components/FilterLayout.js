@@ -8,14 +8,8 @@ const FilterLayout = (props) => {
     challenge_rating: null,
   });
   const title = props;
-  const removeFilter = () => {
-    // dispatch(removeFilters(data));
-    setFilter(null);
-  };
-  const addFilterNavbar = ({ name, challengeRating }) => {
-    const challengeRatingText = (challengeRating) ? challengeRating.join(',') : null;
-    const filterText = [name, challengeRatingText].join(' ');
-    setFilter(filterText);
+  const addFilterNavbar = (name) => {
+    setFilter(name);
     // return name || challengeRatingText ? dispatch(addFilters(filterText)) : null;
   };
   return (
@@ -25,7 +19,6 @@ const FilterLayout = (props) => {
       </h1>
       <input type="text" className="filter-input" id="FilterInput" placeholder="Enter text" onChange={(e) => setFilter(e.target.value)} />
       <button type="button" className="btn btn-default" onClick={addFilterNavbar(filter)}>Send</button>
-      <button type="button" className="btn btn-default" onClick={removeFilter}>Remove Filters</button>
     </div>
   );
 };
