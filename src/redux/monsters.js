@@ -1,19 +1,27 @@
 import RETRIEVE_MONSTERS from './types';
 import getMonsters from '../api';
 
-export const receiveMonsters = () => (dispatch) => {
-  const result = getMonsters();
-  dispatch({
-    type: RETRIEVE_MONSTERS,
-    payload: result,
+const setMonsters = (monsters) => ({
+  type: RETRIEVE_MONSTERS,
+  payload: monsters,
+});
+
+const getFiltered = (filter = '') => (dispatch) => {
+  getMonsters().then((monsters) => {
+    monsters.filter((monster) => monster.name.include(filter));
+    dispatch({
+      type: RETRIEVE_MONSTERS,
+      payload: monsters,
+    });
   });
 };
 
-export const getFiltered = (filter = '') => (dispatch) => {
-  const baseResult = getMonsters();
-  const result = baseResult.filter((monster) => monster.name.include(filter));
-  dispatch({
-    type: RETRIEVE_MONSTERS,
-    payload: result,
+const receiveMonsters = () => (dispatch) => {
+  // eslint-disable-next-line no-debugger
+  debugger;
+  getMonsters().then((monsters) => {
+    dispatch(setMonsters(monsters));
   });
 };
+
+export { receiveMonsters, getFiltered };

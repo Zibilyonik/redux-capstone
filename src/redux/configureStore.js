@@ -1,12 +1,12 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
+import ReduxThunk from 'redux-thunk';
 import logger from 'redux-logger';
-import monsters from './monsters';
+import monsterReducer from './reducers/monsters';
 
 const reducer = combineReducers({
-  monsters,
+  monsterReducer,
 });
 
-const store = createStore(reducer, applyMiddleware(thunk, logger));
+const store = createStore(reducer, applyMiddleware(ReduxThunk, logger));
 
 export default store;

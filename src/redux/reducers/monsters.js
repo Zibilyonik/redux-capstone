@@ -1,16 +1,19 @@
 import RETRIEVE_MONSTERS from '../types';
 
-const initialState = [];
+const initialState = {
+  filter: '',
+  monsters: [],
+};
 
-function monsterReducer(monsters = initialState, action) {
+function monsterReducer(state = initialState, action) {
   const { type, payload } = action;
 
   switch (type) {
     case RETRIEVE_MONSTERS:
-      return payload;
+      return { ...state, monsters: payload };
 
     default:
-      return monsters;
+      return state;
   }
 }
 
