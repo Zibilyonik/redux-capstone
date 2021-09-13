@@ -1,13 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './MonsterCard.scss';
 
 const MonsterCard = (props) => {
-  const { name, index, challenge } = props;
+  const {
+    name, index, size, alignment, hit_dice: hitDice, hit_points: hitPoints,
+  } = props;
 
   return (
-    <div id={index} className="col-6 rounded py-2 px-1 monster-card-style">
-      <h4 className="challenge_rating as ChallengeRating } = props;-display-style">{challenge || ''}</h4>
-      <h1 className="name-display-style black">{name || ''}</h1>
+    <div className="monster-card-container">
+      <p id={index} className="w-100 name-display-style black">{name || ''}</p>
+      <div className="details-container" display="none">
+        <p className="w-100 name-display-style black">{size || ''}</p>
+        <p className="w-100 name-display-style black">{alignment || ''}</p>
+        <p className="w-100 name-display-style black">{hitDice || ''}</p>
+        <p className="w-100 name-display-style black">{hitPoints || ''}</p>
+      </div>
     </div>
   );
 };
@@ -15,6 +23,17 @@ const MonsterCard = (props) => {
 MonsterCard.propTypes = {
   name: PropTypes.string.isRequired,
   index: PropTypes.string.isRequired,
-  challenge: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+  size: PropTypes.string,
+  alignment: PropTypes.string,
+  hit_dice: PropTypes.string,
+  hit_points: PropTypes.number,
 };
+
+MonsterCard.defaultProps = {
+  size: '',
+  alignment: '',
+  hit_dice: '',
+  hit_points: 0,
+};
+
 export default MonsterCard;

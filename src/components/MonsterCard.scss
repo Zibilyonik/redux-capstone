@@ -1,0 +1,29 @@
+$base-colour: #FD5294;
+$darkened-base-colour: rgba($base-colour, 0.9);
+$title-bg-colour: #DC4782;
+
+p {
+  font-size: 0.8rem;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+.monster-card-dark {
+  background-color: $darkened-base-colour;
+}
+
+.monster-card-light {
+  background-color: $base-colour;
+}
+
+.monster-card-style {
+  height: 20vh;
+}
+
+.monster-card-container:only-child {
+  .details-container{
+    display: block;
+  }
+}
