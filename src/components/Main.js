@@ -1,4 +1,3 @@
-/* eslint-disable no-return-assign */
 import React, { useEffect } from 'react';
 import { connect, useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -29,7 +28,6 @@ const MainMonstersList = (props) => {
         hit_points: monster.hit_points,
         hit_dice: monster.hit_dice,
       };
-      console.log(details);
       props.receiveMonsterDetails(index);
       return details;
     });
