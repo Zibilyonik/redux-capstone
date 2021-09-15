@@ -19,10 +19,12 @@ a {
 }
 
 .monster-card-style {
+  padding-top: 15%!important;
   height: 20vh;
+  font-weight: bold;
 }
 
-.monster-card-container:only-child {
+.monster-card-style:only-child {
   width: 100vw;
   height: 100vh;
   .details-container{
