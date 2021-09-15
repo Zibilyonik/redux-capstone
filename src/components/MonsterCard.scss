@@ -5,6 +5,7 @@ $title-bg-colour: #DC4782;
 p {
   font-size: 0.8rem;
   color: white;
+  font-family: 'Lato Regular';
 }
 
 a {
@@ -25,8 +26,15 @@ a {
 }
 
 .monster-card-style:only-child {
+  button{
+    display: block!important;
+  }
+  .link-style{
+    pointer-events: none;
+  }
   width: 100vw;
   height: 100vh;
+  font-size: 2rem!important;
   .details-container{
     display: block;
   }

@@ -25,3 +25,17 @@ code {
     'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "Lato";
+  src: local("Lato"),
+   url("./fonts/Lato-Light.ttf") format("truetype");
+  font-weight: lighter;
+  }
+
+@font-face {
+  font-family: "Lato Regular";
+  src: local("Lato"),
+    url("./fonts/Lato-Regular.ttf") format("truetype");
+  font-weight: regular;
+  }

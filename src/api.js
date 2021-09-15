@@ -19,6 +19,7 @@ const getMonsters = async () => {
 export const getMonster = async (id) => {
   const result = await axios.get(`https://www.dnd5eapi.co/api/monsters/${id}/`);
   const { data } = result;
+  data.id = data.index;
   const tempArr = [];
   tempArr.push(data);
   return tempArr;

@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react';
 import { connect, useSelector, useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { setMonsters, getFiltered, receiveMonsterDetails } from '../redux/monsters';
 import MonsterCard from './MonsterCard';
-import getMonsters, { getMonster } from '../api';
+import getMonsters from '../api';
 
 const MainMonstersList = (props) => {
+  const history = useHistory();
   const dispatch = useDispatch();
   const monstersList = useSelector((state) => state.monsterReducer.monsters);
   const monsters = async () => {
@@ -17,35 +18,21 @@ const MainMonstersList = (props) => {
     monsters();
   }, []);
 
-  const monsterOnClick = (index) => {
-    getMonster(index).then((monster) => {
-      const details = {
-        index: monster.index,
-        name: monster.name,
-        size: monster.size,
-        type: monster.type,
-        alignment: monster.alignment,
-        hit_points: monster.hit_points,
-        hit_dice: monster.hit_dice,
-      };
-      props.receiveMonsterDetails(index);
-      return details;
-    });
-  };
   return (
     <div className="main">
       <div className="navbar">
         <h1 className="navbar-title">D&D Monsters</h1>
         <input type="text" className="filter-input" id="FilterInput" placeholder="Enter text" />
         <button type="button" className="btn btn-default" onClick={(e) => { props.getFiltered(e.target.previousSibling.value.toLowerCase()); }}>Send</button>
-        <button type="button" className="btn btn-default" onClick={() => { props.getFiltered(''); }}>Reset</button>
+        <Link to="/" className="btn btn-default" onClick={() => { props.getFiltered(''); }}>Reset</Link>
       </div>
       <div className="mx-auto p-0 monster-container-style row container">
         {monstersList.map((monster, index) => (
           <div key={monster.id} className={`col-6 ${index % 4 === 0 || index % 4 === 3 ? 'monster-card-dark' : 'monster-card-light'} py-2 px-auto monster-card-style d-inline-flex`}>
+            <button type="button" className="btn btn-default" style={{ display: 'none' }} onClick={() => { history.push('/'); props.getFiltered(''); }}>Send</button>
             <Link
               key={monster.id}
-              id={monster.id}
+              id={`${monster.id}-link`}
               to={{
                 pathname: `/monsters/${monster.id}`,
                 itemProps: {
@@ -53,9 +40,9 @@ const MainMonstersList = (props) => {
                   name: monster.name,
                 },
               }}
-              className="mx-auto"
+              className="mx-auto link-style"
               onClick={(e) => {
-                monsterOnClick(e.target.id);
+                props.receiveMonsterDetails(e.target.id);
               }}
             >
               <MonsterCard
