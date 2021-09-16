@@ -23,7 +23,16 @@ const MainMonstersList = (props) => {
       <div className="navbar">
         <h1 className="navbar-title ps-2 mb-0">D&D</h1>
         <input type="text" className="filter-input mx-auto" id="FilterInput" placeholder="Enter text" />
-        <button type="button" className="btn btn-main-style border-end" onClick={(e) => { props.getFiltered(e.target.previousSibling.value.toLowerCase()); setFilter(e.target.previousSibling.value.toLowerCase()); }}>Filter</button>
+        <button
+          type="button"
+          className="btn btn-main-style border-end"
+          onClick={(e) => {
+            props.getFiltered(e.target.previousSibling.value.toLowerCase());
+            setFilter(e.target.previousSibling.value.toLowerCase());
+          }}
+        >
+          Filter
+        </button>
         <Link to="/" className="btn btn-main-style" onClick={() => { props.getFiltered(''); setFilter(''); document.getElementById('FilterInput').value = ''; }}>Reset</Link>
       </div>
       <div className="mx-auto p-0 monster-container-style row container">
@@ -41,6 +50,7 @@ const MainMonstersList = (props) => {
               alignment={monstersList[0].alignment || ''}
               hit_points={monstersList[0].hit_points || 0}
               hit_dice={monstersList[0].hit_dice || ''}
+              challenge={monstersList[0].challenge}
             />
           </div>
         )}
@@ -65,6 +75,7 @@ const MainMonstersList = (props) => {
                 key={monster.id}
                 index={monster.id}
                 name={monster.name}
+                challenge={monster.challenge}
               />
             </Link>
           </div>

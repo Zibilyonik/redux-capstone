@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MainMonstersList from './components/Main';
 
