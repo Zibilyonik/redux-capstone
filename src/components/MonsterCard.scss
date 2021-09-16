@@ -53,8 +53,7 @@ a {
   height: 100vh;
   font-size: 1.3rem;
   .details-container{
-    width: 100vw;
-    margin-left:-12px;
+    margin: 0 -12px;
     border-top: 10px solid $title-bg-colour;
     background-color: $darkened-base-colour;
     display: block;
