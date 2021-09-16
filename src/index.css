@@ -28,21 +28,23 @@ code {
 
 @font-face {
   font-family: "Lato";
-  src: local("Lato"),
-   url("./fonts/Lato-Light.ttf") format("truetype");
+  src:
+    local("Lato"),
+    url("./fonts/Lato-Light.ttf") format("truetype");
   font-weight: lighter;
-  }
+}
 
 @font-face {
   font-family: "Lato Regular";
-  src: local("Lato"),
+  src:
+    local("Lato"),
     url("./fonts/Lato-Regular.ttf") format("truetype");
-  font-weight: regular;
-  }
+}
 
 @font-face {
   font-family: "Lato Bold";
-  src: local("Lato"),
+  src:
+    local("Lato"),
     url("./fonts/Lato-Bold.ttf") format("truetype");
   font-weight: bold;
-  }
+}
