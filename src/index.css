@@ -39,3 +39,10 @@ code {
     url("./fonts/Lato-Regular.ttf") format("truetype");
   font-weight: regular;
   }
+
+@font-face {
+  font-family: "Lato Bold";
+  src: local("Lato"),
+    url("./fonts/Lato-Bold.ttf") format("truetype");
+  font-weight: bold;
+  }

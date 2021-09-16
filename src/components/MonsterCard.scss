@@ -1,16 +1,23 @@
 $base-colour: #FD5294;
 $darkened-base-colour: rgba($base-colour, 0.9);
 $title-bg-colour: #DC4782;
-
+a, p, div, h1, h2, h3, h4, h5, button {
+  color: white!important;
+  font-family: 'Lato Bold'!important;
+}
 p {
   font-size: 0.8rem;
-  color: white;
   font-family: 'Lato Regular';
 }
 
 a {
   text-decoration: none;
 }
+
+.navbar {
+  background-color: $title-bg-colour;
+}
+
 .monster-card-dark {
   background-color: $darkened-base-colour;
 }
@@ -20,22 +27,29 @@ a {
 }
 
 .monster-card-style {
-  padding-top: 15%!important;
-  height: 20vh;
+  padding-top: 10%!important;
+  height: 15vh;
   font-weight: bold;
 }
 
-.monster-card-style:only-child {
-  button{
-    display: block!important;
-  }
-  .link-style{
-    pointer-events: none;
-  }
+.monster-details-style {
   width: 100vw;
   height: 100vh;
+  padding-top: 4rem;
   font-size: 2rem!important;
   .details-container{
     display: block;
   }
+}
+
+.btn-main-style{
+  background-color: transparent;
+}
+
+.btn-back-style {
+  border: 2px solid white;
+  position: relative;
+  top: -3.5rem;
+  left: -11rem;
+  height: 2.5rem;
 }

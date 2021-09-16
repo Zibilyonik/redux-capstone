@@ -9,12 +9,12 @@ const MonsterCard = (props) => {
 
   return (
     <div className="monster-card-container">
-      <p id={index} className="w-100 name-display-style black">{name || ''}</p>
+      <p id={index} className="w-100 name-display-style">{name || ''}</p>
       <div className="details-container" display="none">
-        <p className="w-100 name-display-style black">{size || ''}</p>
-        <p className="w-100 name-display-style black">{alignment || ''}</p>
-        <p className="w-100 name-display-style black">{hitDice || ''}</p>
-        <p className="w-100 name-display-style black">{hitPoints || ''}</p>
+        <p className="w-100 name-display-style">{size || ''}</p>
+        <p className="w-100 name-display-style">{alignment || ''}</p>
+        <p className="w-100 name-display-style">{hitDice || ''}</p>
+        <p className="w-100 name-display-style">{hitPoints || ''}</p>
       </div>
     </div>
   );
