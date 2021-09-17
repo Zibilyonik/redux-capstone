@@ -35,7 +35,7 @@ const MainMonstersList = (props) => {
         </button>
         <Link to="/" className="btn btn-main-style" onClick={() => { props.getFiltered(''); setFilter(''); document.getElementById('FilterInput').value = ''; }}>Reset</Link>
       </div>
-      <div className="mx-auto p-0 monster-container-style row container">
+      <div className="mx-auto p-0 monster-container-style">
         {monstersList.length === 1 && (
           <div className="mx-auto text-center monster-card-light monster-details-style">
             <Link to="/" className="btn btn-default btn-back-style" onClick={() => { props.getFiltered(filter); }}>
