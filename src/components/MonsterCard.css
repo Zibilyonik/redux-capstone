@@ -1,10 +1,8 @@
-$base-colour: #FD5294;
-$darkened-base-colour: #ce4177;
-$title-bg-colour: #DC4782;
 a, p, div, h1, h2, h3, h4, h5, button {
-  color: white!important;
-  font-family: 'Lato Bold'!important;
+  color: white !important;
+  font-family: "Lato Bold" !important;
 }
+
 p {
   font-family: 'Lato Regular';
 }
@@ -15,18 +13,19 @@ a {
 }
 
 .navbar {
-  background-color: $title-bg-colour;
+  background-color: #DC4782;
 }
+
 .filter-input {
   width: 40%;
 }
 
 .monster-card-dark {
-  background-color: $darkened-base-colour;
+  background-color: #ce4177;
 }
 
 .monster-card-light {
-  background-color: $base-colour;
+  background-color: #FD5294;
 }
 
 .monster-card-style {
@@ -44,23 +43,25 @@ a {
 }
 
 .monster-details-style {
-  .name-display-style {
-    position: relative;
-    top: -1.7rem;
-    font-size: 2rem;
-  }
   width: 100vw;
   height: 100vh;
   font-size: 1.3rem;
-  .details-container{
-    margin: 0 -12px;
-    border-top: 10px solid $title-bg-colour;
-    background-color: $darkened-base-colour;
-    display: block;
-  }
 }
 
-.btn-main-style{
+.monster-details-style .name-display-style {
+  position: relative;
+  top: -1.7rem;
+  font-size: 2rem;
+}
+
+.monster-details-style .details-container {
+  margin: 0 -12px;
+  border-top: 10px solid #DC4782;
+  background-color: #ce4177;
+  display: block;
+}
+
+.btn-main-style {
   background-color: transparent;
   padding: 6px 9px;
 }
@@ -69,6 +70,7 @@ a {
   border: 2px solid white;
   position: relative;
   top: 1rem;
-  left:-45%;
+  left: -45%;
   height: 2.5rem;
 }
+/*# sourceMappingURL=MonsterCard.css.map */
