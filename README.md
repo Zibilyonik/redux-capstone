@@ -1,44 +1,71 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# Game Rating
+A lightweight React/Redux project that displays all the monsters listed in the 5th Edition of Dungeons and Dragons API. All the data is retrieved from the D&D [API](https://api.open5e.com/monsters/), and presented for users to enjoy.
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `yarn start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Project Description
+This project combines the use of JavaScript, React/Redux, HTML/CSS and Bootstrap to provide an optimized experience for mobile users.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Using this project, users can browse the large list of monsters and learn about their challenge ratings, click on monsters to access detailed information, and use the search function to filter the list of monsters by name.
 
-### `yarn test`
+The main landing page displays a grid of item cards, which has the name of the monster as the title, and the monster's challenge rating as the secondary title.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Users can click on the card of the monster to open up a new page that displays the detailed information about the monster.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Screenshots of the page
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+![image](https://user-images.githubusercontent.com/34018257/133767703-30ccde21-44ae-4b1a-ab7d-f8fde8cd3709.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![image](https://user-images.githubusercontent.com/34018257/133767749-a392a430-7e0f-4fc0-9915-123633330b11.png)
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Live Version
+[Click Here](https://mystifying-jang-9e145d.netlify.app/)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Video Description
+[Loom Link](https://loom.com/share/71d89f95533b48329cdd1d8c1b619a6e)
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Built With
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- HTML
+- CSS
+- JAVASCRIPT
+- REACT
+- REDUX
+- BOOTSTRAP
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Getting Started
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Open Terminal.
+2. Navigate to your desired location to download the contents of this repository.
+3. Copy and paste the following code into the Terminal: git clone https://github.com/Zibilyonik/redux-capstone.git
+4. `cd redux-capstone`.
+5. Install the required node modules by running `npm install` command.
+7. After installing all the required node modules, you can run the project on your own server using `npm start`.
+
+
+## Contributors
+
+👤 **Onur Onat Surmeli**
+
+- [GitHub](https://github.com/Zibilyonik)
+- [Twitter](https://twitter.com/OnurSurmeli2)
+- [LinkedIn](https://www.linkedin.com/in/onuronatsurmeli/)
+
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Thank you
+
+Thank you for taking your time to view this project, we hope you enjoyed it! See you later in the next one!
