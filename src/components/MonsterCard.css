@@ -1,0 +1,87 @@
+a,
+p,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+button {
+  color: white !important;
+  font-family: "Lato Bold", sans-serif !important;
+}
+
+p {
+  font-family: 'Lato Regular', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  z-index: 10;
+}
+
+.navbar {
+  background-color: #dc4782;
+}
+
+.filter-input {
+  width: 40%;
+}
+
+.monster-container-style {
+  max-width: 100%;
+}
+
+.monster-card-dark {
+  background-color: #ce4177;
+}
+
+.monster-card-light {
+  background-color: #fd5294;
+}
+
+.monster-card-style {
+  height: 20vh;
+  text-align: center;
+  font-weight: bold;
+}
+
+.name-display-style {
+  font-size: 1.4rem;
+}
+
+.details-container {
+  display: none;
+}
+
+.monster-details-style {
+  max-width: 100vw;
+  height: 100vh;
+  font-size: 1.3rem;
+}
+
+.monster-details-style .name-display-style {
+  position: relative;
+  top: -1.7rem;
+  font-size: 2rem;
+}
+
+.monster-details-style .details-container {
+  max-width: 100vw;
+  border-top: 10px solid #dc4782;
+  background-color: #ce4177;
+  display: block;
+}
+
+.btn-main-style {
+  background-color: transparent;
+  padding: 6px 9px;
+}
+
+.btn-back-style {
+  border: 2px solid white;
+  position: relative;
+  top: 1rem;
+  left: -42%;
+  height: 2.5rem;
+}
